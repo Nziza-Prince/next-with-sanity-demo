@@ -8,6 +8,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+
 model Account {
   id                String  @id @default(cuid())
   userId            String
@@ -41,8 +42,8 @@ model User {
   email         String    @unique
   emailVerified DateTime?
   image         String?
-  password      String?
-  role          String    @default("JOURNALIST")
+  password      String?   // Added password field for credentials auth
+  role          String    @default("JOURNALIST") // ADMIN, JOURNALIST
   accounts      Account[]
   sessions      Session[]
 

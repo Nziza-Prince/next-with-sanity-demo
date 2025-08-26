@@ -30,10 +30,10 @@ export default function SetupPage() {
       if (response.ok) {
         setMessage('Demo admin user created successfully! You can now sign in.')
       } else {
-        const error = await response.json()
-        setMessage(error.error || 'Something went wrong')
+        const errorData = await response.json()
+        setMessage(errorData.error || 'Something went wrong')
       }
-    } catch (error) {
+    } catch (err) {
       setMessage('Failed to create demo user')
     } finally {
       setLoading(false)

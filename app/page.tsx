@@ -43,8 +43,7 @@ export default async function Home() {
             ))}
           </div>
         )}
-        // Update your main page.tsx to include admin link
-// Add this to your main page component
+
 <Link href="/admin" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
   Admin Portal
 </Link>
